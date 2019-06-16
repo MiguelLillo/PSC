@@ -106,19 +106,35 @@ void mostrar(TColaPrio cp){
 				aux = (aux)->sig;
 				printf("\t %d\n",(aux)->id);
 			}
-
-
 		}//si es null pasamos al siguiente indice
 		printf("\n");
-
 	}
-
-
 }
 
 /*
  * Se eliminan todos los procesos de la cola de prioridad
  */
-void destruir (TColaPrio cp);
+void destruir (TColaPrio cp){
+	int i;
+	for (i = 0; i < L; i++) {
+
+		if (cp[i] != NULL) {
+			Lista ant=cp[i];
+			Lista ptr=cp[i]->sig;
+			cp[i]=NULL;
+			do {
+				free(ant);
+				ant = ptr;
+				ptr=ptr->sig;
+
+			} while (ptr != NULL);
+			free(ptr);
+
+		} //si es null pasamos al siguiente indice
+	}
+
+
+
+}
 
 

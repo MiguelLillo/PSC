@@ -25,7 +25,7 @@ int main(){
 		 nuevoProceso(colaPrio,i,i);
 		 nuevoProceso(colaPrio,i,i+L);
 	 }
-
+	 nuevoProceso(colaPrio,2,14);
 	 mostrar(colaPrio);
 
 	 printf("******************************\n\n");
@@ -49,12 +49,12 @@ int main(){
 	 int esta=buscar(colaPrio,5);
 	 printf(" el proceso de id 5 esta en %d\n\n",esta);
 
-	 printf("******************************\n\n");
-	 printf("Buscamos proceso con id 5\n\n");
-	 printf("******************************\n\n");
+//	 printf("******************************\n\n");
+//	 printf("Buscamos proceso con id 5\n\n");
+//	 printf("******************************\n\n");
 
-	 esta=buscar(colaPrio,5);
-	 printf(" el proceso de id 5 no esta %d\n\n",esta);
+//	 esta=buscar(colaPrio,5);
+//	 printf(" el proceso de id 5 no esta %d\n\n",esta);
 
 
 
