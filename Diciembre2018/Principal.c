@@ -34,13 +34,13 @@ int main(){
 
 	 ejecutaProceso(colaPrio);
 	 mostrar(colaPrio);
-//
-//	 printf("******************************\n\n");
-//	 printf("Ejecutamos el proceso de mayor prioridad \n\n");
-//	 printf("******************************\n\n");
-//
-//	 ejecutaProceso(colaPrio);
-//	 mostrar(colaPrio);
+	 fflush(stdout);
+	 printf("******************************\n\n");
+	 printf("Ejecutamos el proceso de mayor prioridad \n\n");
+	 printf("******************************\n\n");
+
+	 ejecutaProceso(colaPrio);
+	 mostrar(colaPrio);
 //
 //
 //	 printf("******************************\n\n");

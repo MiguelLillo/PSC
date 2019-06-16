@@ -56,9 +56,15 @@ int ejecutaProceso(TColaPrio cp){
 	}
 	if(i==L){
 		printf("No se ha encontrado ningún proceso.\n");
-		return -1;
+		return -1; //hay que poner los returns bien
 	}else{//hay alguna posicion de la cola ocupada
+		Lista aux=cp[i];
+		int idEliminado=cp[i]->id;
+		cp[i]=cp[i]->sig;
+		printf("Se ha ejecutado el proceso %d con prioridad %d\n",idEliminado,i);
+		free(aux);
 
+		return 0;
 	}
 
 }
