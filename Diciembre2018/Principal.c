@@ -25,7 +25,7 @@ int main(){
 		 nuevoProceso(colaPrio,i,i);
 		 nuevoProceso(colaPrio,i,i+L);
 	 }
-	 printf("Esto va antes de mostrar la cola\n");
+
 	 mostrar(colaPrio);
 
 	 printf("******************************\n\n");
@@ -41,30 +41,29 @@ int main(){
 
 	 ejecutaProceso(colaPrio);
 	 mostrar(colaPrio);
-//
-//
-//	 printf("******************************\n\n");
-//	 printf("Buscamos proceso con id 5\n\n");
-//	 printf("******************************\n\n");
-//
-//	 int esta=buscar(colaPrio,5);
-//	 printf(" el proceso de id 5 esta en %d\n\n",esta);
-//
-//	 printf("******************************\n\n");
-//	 printf("Buscamos proceso con id 5\n\n");
-//	 printf("******************************\n\n");
-//
-//	 esta=buscar(colaPrio,5);
-//	 printf(" el proceso de id 5 no esta %d\n\n",esta);
-//
-//
-//
-//	 printf("******************************\n\n");
-//	 printf("Destruimos todos los procesos \n\n");
-//	 printf("******************************\n\n");
-//
-//	 destruir(colaPrio);
-//	 mostrar(colaPrio);
+
+	 printf("******************************\n\n");
+	 printf("Buscamos proceso con id 5\n\n");
+	 printf("******************************\n\n");
+
+	 int esta=buscar(colaPrio,5);
+	 printf(" el proceso de id 5 esta en %d\n\n",esta);
+
+	 printf("******************************\n\n");
+	 printf("Buscamos proceso con id 5\n\n");
+	 printf("******************************\n\n");
+
+	 esta=buscar(colaPrio,5);
+	 printf(" el proceso de id 5 no esta %d\n\n",esta);
+
+
+
+	 printf("******************************\n\n");
+	 printf("Destruimos todos los procesos \n\n");
+	 printf("******************************\n\n");
+
+	 destruir(colaPrio);
+	 mostrar(colaPrio);
 
 	 return 0;
 }

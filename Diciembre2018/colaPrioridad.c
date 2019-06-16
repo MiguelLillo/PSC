@@ -19,28 +19,20 @@ void crear(TColaPrio cp){
  * Dada una prioridad y un identificador de proceso,
  * lo a�ade AL FINAL de la lista que le corresponde.
  */
-void nuevoProceso (TColaPrio cp,int p, int id){
-	printf("What\n");
-	Lista proc=(Lista)malloc(sizeof(struct TNodo));
-	printf("What2\n");
-	(proc)->id=id;
-	(proc)->sig=NULL;
-	printf("antes del if\n");
+void nuevoProceso(TColaPrio cp, int p, int id) {
+	Lista proc = (Lista) malloc(sizeof(struct TNodo));
+	(proc)->id = id;
+	(proc)->sig = NULL;
 	fflush(stdout);
-	if(cp[p]==NULL){
-		printf("Dentro del if\n");
-		cp[p]=proc;
-	}else{
-		Lista aux=cp[p];
-		while(aux->sig!=NULL){
-			printf("Que cojones pasa aqui");
-			aux=aux->sig;
+	if (cp[p] == NULL) {
+		cp[p] = proc;
+	} else {
+		Lista aux = cp[p];
+		while (aux->sig != NULL) {
+			aux = aux->sig;
 		}
-		(aux)->sig=proc;
+		(aux)->sig = proc;
 	}
-	printf("después del if\n");
-
-
 }
 
 /**
@@ -73,7 +65,29 @@ int ejecutaProceso(TColaPrio cp){
  * Dado un identificador de proceso devuelve la prioridad de �ste.
  * Si el id del proceso no existe se devolver� -1.
  */
-int buscar(TColaPrio cp, int id);
+int buscar(TColaPrio cp, int id){
+	int encontrado=0;
+	int i=0;
+	int prio;
+	while(!encontrado && i<L){
+		if(cp[i]!=NULL){
+			Lista aux=cp[i];
+			do{
+				if(aux->id==id){
+					prio=i;
+					encontrado=1;
+				}
+
+			}while(!encontrado && (aux=aux->sig)!=NULL);
+
+		}
+		i++;
+	}
+	if(!encontrado){
+		prio=-1;
+	}
+	return prio;
+}
 
 /*
  * Recorre la estructura para mostrar los procesos existentes
